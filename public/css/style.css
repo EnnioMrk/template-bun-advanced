@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'GHOSTINK';
+    src: url('/fonts/Ghostink.otf'), url('/fonts/Ghostink.ttf');
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body > div > * {
+    animation: load 0.5s ease-in-out;
+}
+
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

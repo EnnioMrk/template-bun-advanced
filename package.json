@@ -1,0 +1,16 @@
+{
+    "name": "template-bun-advanced",
+    "module": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "bun run index.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "chalk": "^5.3.0",
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.0",
+        "pocketbase": "^0.21.5"
+    }
+}
