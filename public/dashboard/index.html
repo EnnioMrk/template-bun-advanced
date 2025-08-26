@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="js/index.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="w-screen h-screen overflow-hidden">
+            <div id="wrapper" class="flex justify-center items-center h-full">
+                <div id="content" class="w-fit h-fit max-w-fit max-h-fit">
+                    <!-- Loading State -->
+                    <div
+                        id="loading"
+                        class="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-8 max-w-md mx-auto text-center border border-white/20"
+                    >
+                        <div class="animate-pulse space-y-4">
+                            <div
+                                class="h-4 bg-white/20 rounded w-3/4 mx-auto"
+                            ></div>
+                            <div
+                                class="h-4 bg-white/20 rounded w-1/2 mx-auto"
+                            ></div>
+                            <div
+                                class="h-4 bg-white/20 rounded w-2/3 mx-auto"
+                            ></div>
+                            <div class="h-10 bg-white/20 rounded w-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Main Dashboard (hidden initially) -->
+                    <div
+                        id="dashboard"
+                        class="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-8 max-w-md mx-auto border border-white/20 hidden"
+                    >
+                        <div class="space-y-6">
+                            <!-- User Info -->
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="text-white/70 text-sm"
+                                        >First Name</label
+                                    >
+                                    <div
+                                        id="first-name"
+                                        class="text-white text-lg font-medium"
+                                    >
+                                        -
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="text-white/70 text-sm"
+                                        >Last Name</label
+                                    >
+                                    <div
+                                        id="last-name"
+                                        class="text-white text-lg font-medium"
+                                    >
+                                        -
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="text-white/70 text-sm"
+                                        >Email</label
+                                    >
+                                    <div
+                                        id="email"
+                                        class="text-white text-lg font-medium break-all"
+                                    >
+                                        -
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Logout Button -->
+                            <button
+                                id="logout-btn"
+                                class="w-full bg-gradient-to-r from-rtg-5 to-rtg-6 text-white py-3 px-4 rounded-xl font-medium hover:from-rtg-6 hover:to-rtg-5 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                            >
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Error State (hidden initially) -->
+                    <div
+                        id="error"
+                        class="bg-gradient-to-br from-rtg-5 to-rtg-6 rounded-2xl shadow-xl p-8 max-w-md mx-auto text-center hidden"
+                    >
+                        <div
+                            class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4"
+                        >
+                            <svg
+                                class="w-8 h-8 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.664-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-white text-xl font-bold mb-2">Oops!</h2>
+                        <p id="error-message" class="text-white/80 mb-4">
+                            Something went wrong
+                        </p>
+                        <button
+                            onclick="location.reload()"
+                            class="bg-white/20 hover:bg-white/30 text-white px-6 py-2 rounded-lg transition-colors duration-300"
+                        >
+                            Try Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
